@@ -317,12 +317,26 @@ img {
   background: var(--accent-blue-soft);
   color: var(--accent-blue);
   border: 1px solid rgba(0, 75, 135, 0.18);
+  transition: all 0.18s ease;
+}
+
+.badge-spp:hover {
+  background: rgba(0, 75, 135, 0.14);
+  border-color: rgba(0, 75, 135, 0.35);
+  color: var(--accent-blue);
 }
 
 .badge-bilateral {
   background: var(--accent-crimson-soft);
   color: var(--accent-crimson);
   border: 1px solid rgba(200, 16, 46, 0.18);
+  transition: all 0.18s ease;
+}
+
+.badge-bilateral:hover {
+  background: rgba(200, 16, 46, 0.14);
+  border-color: rgba(200, 16, 46, 0.35);
+  color: var(--accent-crimson);
 }
 
 .badge-dot {
@@ -402,8 +416,8 @@ img {
 
 .hero-meta-strip {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  grid-template-columns: 0.72fr 1.48fr 0.96fr;
+  gap: 14px;
   padding-top: 24px;
   border-top: 1px solid var(--border-subtle);
 }
@@ -411,19 +425,21 @@ img {
 .meta-item {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 3px;
 }
 
 .meta-kicker {
-  font-size: 0.72rem;
+  font-size: 0.71rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: var(--ink-muted);
+  white-space: nowrap;
 }
 
 .meta-val {
-  font-size: 0.93rem;
+  font-size: 0.88rem;
+  line-height: 1.42;
   font-weight: 700;
   color: var(--ink-primary);
 }

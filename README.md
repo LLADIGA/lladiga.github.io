@@ -2,7 +2,7 @@
 
 Official multi-page website repository for **LLADIGA** (*Learning Language with Dialogue Games*), hosted at **[https://lladiga.github.io](https://lladiga.github.io)**.
 
-LLADIGA is a 3-year bilateral research project carried out by the **University of Potsdam** (Prof. Dr. David Schlangen) and the **Free University of Bozen-Bolzano / unibz** (Prof. Raffaella Bernardi) within the bilateral collaboration framework between the **Deutsche Forschungsgemeinschaft (DFG)** — Priority Programme [SPP 2556 *LaSTing*](https://www.lasting-spp.org/) — and the **Autonomous Province of Bolzano – South Tyrol** (*D-SUD LAV*).
+LLADIGA is a 3-year bilateral research project carried out by the **University of Potsdam** (Prof. Dr. David Schlangen) and the **Free University of Bozen-Bolzano** (Prof. Raffaella Bernardi) within the bilateral collaboration framework between the **Deutsche Forschungsgemeinschaft (DFG)** — Priority Programme [SPP 2556 *LaSTing*](https://www.lasting-spp.org/) — and the **Autonomous Province of Bolzano – South Tyrol** ([Joint Projects *D-SUD LAV*](https://www.dfg.de/de/foerderung/foerdermoeglichkeiten/programme/inter-foerdermassnahmen/antragstellung-suedtirol)).
 
 ---
 
