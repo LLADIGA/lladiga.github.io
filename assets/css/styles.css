@@ -149,10 +149,12 @@ img {
 }
 
 .brand-mark {
-  width: 36px;
-  height: 36px;
-  border-radius: 9px;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  object-fit: cover;
   flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(13, 37, 63, 0.18);
 }
 
 .brand-text-wrap {
@@ -195,10 +197,15 @@ img {
   transition: background 0.16s ease, color 0.16s ease;
 }
 
-.nav-links a:hover,
-.nav-links a.active {
+.nav-links a:hover {
   color: var(--ink-primary);
   background: rgba(18, 24, 36, 0.06);
+}
+
+.nav-links a.active {
+  color: var(--accent-blue);
+  background: var(--accent-blue-soft);
+  font-weight: 700;
 }
 
 .nav-actions {
@@ -631,6 +638,146 @@ img {
   font-style: italic;
   font-size: 0.98rem;
   color: var(--ink-primary);
+}
+
+/* ==========================================================================
+   Subpage Masthead & Home Gateway Cards
+   ========================================================================== */
+.page-hero {
+  position: relative;
+  padding: 56px 0 48px;
+  border-bottom: 1px solid var(--border-subtle);
+  background:
+    radial-gradient(circle at 10% 20%, rgba(0, 75, 135, 0.06), transparent 45%),
+    radial-gradient(circle at 88% 15%, rgba(200, 16, 46, 0.05), transparent 40%),
+    linear-gradient(180deg, #FDFCFA 0%, var(--bg-canvas) 100%);
+  overflow: hidden;
+}
+
+.breadcrumb {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--ink-muted);
+  margin-bottom: 14px;
+}
+
+.breadcrumb a {
+  color: var(--ink-secondary);
+}
+
+.breadcrumb a:hover {
+  color: var(--accent-blue);
+}
+
+.page-hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.15rem, 3.8vw, 3.1rem);
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  margin: 0 0 14px;
+  color: var(--ink-primary);
+}
+
+.page-hero-desc {
+  font-size: 1.08rem;
+  line-height: 1.68;
+  color: var(--ink-secondary);
+  margin: 0;
+  max-width: 68ch;
+}
+
+.gateway-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.gateway-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 28px 30px;
+  color: var(--ink-primary);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.gateway-card:hover {
+  color: var(--ink-primary);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--accent-blue);
+}
+
+.gateway-kicker {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent-blue);
+  margin-bottom: 8px;
+}
+
+.gateway-card h3 {
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  font-weight: 500;
+  margin: 0 0 10px;
+  color: var(--ink-primary);
+}
+
+.gateway-card p {
+  margin: 0 0 18px;
+  font-size: 0.94rem;
+  color: var(--ink-secondary);
+  line-height: 1.62;
+}
+
+.gateway-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent-blue);
+}
+
+.gateway-card:hover .gateway-cta {
+  color: var(--accent-crimson);
+}
+
+.inst-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.inst-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 28px;
+}
+
+.inst-card h3 {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 500;
+  margin: 0 0 8px;
+}
+
+.inst-card p {
+  margin: 0 0 14px;
+  font-size: 0.92rem;
+  color: var(--ink-secondary);
 }
 
 /* ==========================================================================
@@ -1780,7 +1927,9 @@ img {
   .pillars-grid,
   .resources-grid,
   .dissem-grid,
-  .team-grid {
+  .team-grid,
+  .gateway-grid,
+  .inst-grid {
     grid-template-columns: 1fr;
   }
 }

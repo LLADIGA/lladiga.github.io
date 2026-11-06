@@ -18,7 +18,8 @@
   <meta name="twitter:image" content="https://lladiga.github.io/assets/img/lladiga-teaser.jpg" />
 
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="64x64" href="/assets/img/favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/img/lladiga-icon.png" />
 
   <!-- Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -26,7 +27,7 @@
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
 
   <!-- Styles -->
-  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -36,6 +37,7 @@
     "name": "LLADIGA: Learning Language with Dialogue Games",
     "alternateName": "LLADIGA",
     "url": "https://lladiga.github.io/",
+    "logo": "https://lladiga.github.io/assets/img/lladiga-icon.png",
     "description": "A 3-year bilateral research project investigating sample-efficient, purposeful language acquisition in artificial agents through interactive multi-turn dialogue games.",
     "parentOrganization": [
       {
@@ -72,8 +74,8 @@
        ===================================================================== -->
   <header class="site-header" id="site-header">
     <div class="container nav-inner">
-      <a href="#" class="brand-link" aria-label="LLADIGA Home">
-        <img src="assets/img/favicon.svg" alt="" class="brand-mark" width="36" height="36" />
+      <a href="/" class="brand-link" aria-label="LLADIGA Home">
+        <img src="/assets/img/lladiga-icon.png" alt="LLADIGA Emblem" class="brand-mark" width="40" height="40" />
         <span class="brand-text-wrap">
           <span class="brand-acronym">LLADIGA</span>
           <span class="brand-sub">Potsdam × unibz</span>
@@ -82,14 +84,11 @@
 
       <nav aria-label="Primary Navigation">
         <ul class="nav-links" id="nav-links">
-          <li><a href="#vision">Vision</a></li>
-          <li><a href="#sandbox">Dialogue Games</a></li>
-          <li><a href="#research">Research</a></li>
-          <li><a href="#lasting">SPP LaSTing</a></li>
-          <li><a href="#challenges">Playschool</a></li>
-          <li><a href="#publications">Publications</a></li>
-          <li><a href="#team">Team</a></li>
-          <li><a href="#dissemination">Outreach</a></li>
+          <li><a href="/" class="active" aria-current="page">Home</a></li>
+          <li><a href="/research/">Research</a></li>
+          <li><a href="/publications/">Publications</a></li>
+          <li><a href="/community/">Workshops &amp; Outreach</a></li>
+          <li><a href="/team/">Team</a></li>
         </ul>
       </nav>
 
@@ -117,7 +116,7 @@
       <div class="container hero-layout">
         <div class="hero-copy">
           <div class="eyebrow-group">
-            <a href="#lasting" class="badge badge-spp">
+            <a href="/research/#lasting" class="badge badge-spp">
               <span class="badge-dot"></span>
               DFG SPP 2556 “LaSTing”
             </a>
@@ -135,12 +134,12 @@
           </p>
 
           <div class="hero-cta-row">
-            <a href="#sandbox" class="btn-lg solid">
-              <span>Explore Dialogue Sandbox</span>
-              <span aria-hidden="true">↓</span>
+            <a href="/research/" class="btn-lg solid">
+              <span>Explore Research &amp; Sandbox</span>
+              <span aria-hidden="true">→</span>
             </a>
-            <a href="#publications" class="btn-lg outline">
-              <span>Publications &amp; Challenges</span>
+            <a href="/publications/" class="btn-lg outline">
+              <span>Publications &amp; Models</span>
             </a>
           </div>
 
@@ -169,7 +168,7 @@
 
           <figure class="teaser-frame" style="margin: 0 0 12px;">
             <img
-              src="assets/img/lladiga-teaser.jpg"
+              src="/assets/img/lladiga-teaser.jpg"
               alt="Editorial scientific illustration of two agents across a dialogue game table exchanging verbal clues, spatial grids, and strategic questions around a compact green neural prism, leaving behind a tall stack of passive static text corpora."
               width="1376"
               height="768"
@@ -200,12 +199,12 @@
     </section>
 
     <!-- ===================================================================
-         1. Vision & Core Scientific Question
+         Project Vision & Core Motivation
          =================================================================== -->
-    <section class="section alt-bg" id="vision">
+    <section class="section alt-bg">
       <div class="container">
         <div class="section-header">
-          <span class="section-kicker">01 · Project Vision</span>
+          <span class="section-kicker">Project Motivation</span>
           <h2 class="section-title">From Passive Text Prediction to Purposeful Communication</h2>
           <p class="section-desc">
             Bridging cognitive inspirations from child language acquisition with principled multi-turn learning and evaluation for language models.
@@ -224,7 +223,7 @@
               <strong>LLADIGA (Learning Language with Dialogue Games)</strong> addresses this foundational question directly. By turning structured, goal-oriented, multi-turn <em>dialogue games</em> into active learning arenas, we investigate how language models can acquire communicative and reasoning capabilities from interaction signals rather than sheer corpus scale—making AI training not only more transparent and grounded, but also substantially less data-hungry and <strong>less ecologically damaging</strong>.
             </p>
             <p>
-              LLADIGA is a <strong>3-year bilateral project</strong> carried out jointly by the <strong>University of Potsdam</strong> (led by <a href="https://www.ling.uni-potsdam.de/~das/" target="_blank" rel="noopener noreferrer">Prof. Dr. David Schlangen</a>) and the <strong>Free University of Bozen-Bolzano (unibz)</strong> (led by <a href="https://www.unibz.it/en/faculties/engineering/academic-staff/person/2311-raffaella-bernardi" target="_blank" rel="noopener noreferrer">Prof. Raffaella Bernardi</a>) within the bilateral collaboration framework between the <strong>Deutsche Forschungsgemeinschaft (DFG)</strong> and the <strong>Autonomous Province of Bolzano – South Tyrol</strong> (Joint Projects <em>D-SUD LAV</em>).
+              LLADIGA is a <strong>3-year bilateral project</strong> carried out jointly by the <strong>University of Potsdam</strong> (led by <a href="https://www.ling.uni-potsdam.de/~das/" target="_blank" rel="noopener noreferrer">Prof. Dr. David Schlangen</a>) and the <strong>Free University of Bozen-Bolzano (unibz)</strong> (led by <a href="https://www.unibz.it/en/faculties/engineering/academic-staff/person/2311-raffaella-bernardi" target="_blank" rel="noopener noreferrer">Prof. Raffaella Bernardi</a>) within the bilateral collaboration framework between the <strong>Deutsche Forschungsgemeinschaft (DFG)</strong> — Priority Programme <a href="https://www.lasting-spp.org/" target="_blank" rel="noopener noreferrer">SPP 2556 “LaSTing”</a> — and the <strong>Autonomous Province of Bolzano – South Tyrol</strong> (Joint Projects <em>D-SUD LAV</em>).
             </p>
           </div>
 
@@ -264,582 +263,75 @@
     </section>
 
     <!-- ===================================================================
-         2. Interactive Dialogue Game Sandbox
+         Explore LLADIGA (Focused Multi-Page Gateways)
          =================================================================== -->
-    <section class="section" id="sandbox">
+    <section class="section">
       <div class="container">
         <div class="section-header">
-          <span class="section-kicker">02 · Interactive Arena</span>
-          <h2 class="section-title">How Models Learn &amp; Play in Dialogue Games</h2>
+          <span class="section-kicker">Explore LLADIGA</span>
+          <h2 class="section-title">Research, Open Science &amp; Community</h2>
           <p class="section-desc">
-            Inspect representative multi-turn episodes mediated by a deterministic Game Master (built on the open <a href="https://clembench.github.io/" target="_blank" rel="noopener noreferrer"><code>clembench</code></a> and <code>lm-playpen</code> ecosystem). Switch games or step turn-by-turn to see how communicative success generates structured learning signals.
+            Navigate our scientific program, interactive dialogue game sandbox, published proceedings, community workshops, and bilateral research team.
           </p>
         </div>
 
-        <div class="sandbox-shell">
-          <div class="sandbox-topbar">
-            <div class="game-tabs" role="tablist" aria-label="Select Dialogue Game Family">
-              <button class="game-tab active" role="tab" aria-selected="true" data-game="taboo">
-                1. Taboo (Verbal)
-              </button>
-              <button class="game-tab" role="tab" aria-selected="false" data-game="grid">
-                2. Grid Reconstruction (Visuospatial)
-              </button>
-              <button class="game-tab" role="tab" aria-selected="false" data-game="guesswhat">
-                3. GuessWhat? (Information-Seeking)
-              </button>
-            </div>
-
-            <div class="sandbox-controls">
-              <button class="ctrl-btn" id="btn-reset-game" type="button" title="Reset episode to initial state">
-                ↺ Reset
-              </button>
-              <button class="ctrl-btn" id="btn-step-turn" type="button" title="Advance one dialogue turn">
-                +1 Turn
-              </button>
-              <button class="ctrl-btn accent" id="btn-auto-play" type="button" title="Replay multi-turn interaction">
-                ▶ Auto-Play
-              </button>
-            </div>
-          </div>
-
-          <div class="sandbox-body">
-            <div class="dialogue-stream-pane">
-              <div>
-                <div class="game-context-banner" id="game-context-banner">
-                  <!-- Populated by main.js -->
-                </div>
-                <div class="turns-list" id="turns-list" aria-live="polite">
-                  <!-- Populated by main.js -->
-                </div>
-              </div>
-            </div>
-
-            <aside class="telemetry-pane" aria-label="Game Master Telemetry and Learning Signals">
-              <h3 class="telemetry-title">Game Master Telemetry</h3>
-
-              <div class="metric-cards">
-                <div class="metric-card">
-                  <span class="m-label">Episode Turn</span>
-                  <span class="m-value" id="metric-turn">2/3</span>
-                </div>
-                <div class="metric-card">
-                  <span class="m-label">Rule Violations</span>
-                  <span class="m-value good" id="metric-violations">0</span>
-                </div>
-                <div class="metric-card">
-                  <span class="m-label">Episode State</span>
-                  <span class="m-value good" id="metric-status">Goal Reached ✓</span>
-                </div>
-                <div class="metric-card">
-                  <span class="m-label">Outcome Signal</span>
-                  <span class="m-value" id="metric-reward">+1.00</span>
-                </div>
-              </div>
-
-              <div class="signal-box">
-                <h4>⚡ Interactive Learning Signal</h4>
-                <p id="signal-desc">
-                  Game Master enforces strict lexical constraints at every turn while rewarding concise, successful communicative grounding.
-                </p>
-              </div>
-
-              <div>
-                <h4 class="telemetry-title" style="margin-bottom: 10px;">Exercised Cognitive Skills</h4>
-                <div class="competencies-tags" id="competencies-tags">
-                  <!-- Populated by main.js -->
-                </div>
-              </div>
-            </aside>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================================================================
-         3. Core Research Pillars
-         =================================================================== -->
-    <section class="section alt-bg" id="research">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-kicker">03 · Scientific Agenda</span>
-          <h2 class="section-title">Four Interlocking Research Pillars</h2>
-          <p class="section-desc">
-            Across its three-year program, LLADIGA investigates interactive learning from external behavioral dynamics down to internal model mechanisms.
-          </p>
-        </div>
-
-        <div class="pillars-grid">
-          <article class="pillar-card">
+        <div class="gateway-grid">
+          <a href="/research/" class="gateway-card">
             <div>
-              <div class="pillar-num">Pillar I · Interactive Learning</div>
-              <h3>Multi-Turn Post-Training &amp; Reinforcement Learning</h3>
+              <div class="gateway-kicker">01 · Scientific Program &amp; Demo</div>
+              <h3>Research &amp; Interactive Sandbox</h3>
               <p>
-                Developing training regimes—spanning imitation on successful interaction traces, preference optimization, and online multi-turn reinforcement learning—that harness programmatic Game Master rewards and intrinsic communicative feedback rather than static human annotations.
+                Step through multi-turn <code>clembench</code> / <code>lm-playpen</code> episodes live (<em>Taboo</em>, <em>Grid Reconstruction</em>, <em>GuessWhat?</em>), explore our four research pillars, and see how LLADIGA anchors into DFG SPP 2556 “LaSTing”.
               </p>
             </div>
-            <div class="pillar-tags">
-              <span>Multi-Turn RL</span>
-              <span>lm-playpen</span>
-              <span>Intrinsic Feedback</span>
-            </div>
-          </article>
+            <span class="gateway-cta">Open Research &amp; Sandbox →</span>
+          </a>
 
-          <article class="pillar-card">
+          <a href="/publications/" class="gateway-card">
             <div>
-              <div class="pillar-num">Pillar II · Generalization</div>
-              <h3>Cross-Game Skill Transfer &amp; Curricula</h3>
+              <div class="gateway-kicker">02 · Scholarship &amp; Models</div>
+              <h3>Publications &amp; Open Artifacts</h3>
               <p>
-                Investigating how functional skills acquired in one family of dialogue games—such as spatial mental modeling, hypothesis pruning, or pragmatic speaker-listener coordination—transfer to unseen games, roles, and broader reasoning tasks, informing principled training curricula.
+                Access peer-reviewed papers, forthcoming technical reports, one-click BibTeX citations, open-source training pipelines on GitHub, and fine-tuned specialist checkpoints on Hugging Face.
               </p>
             </div>
-            <div class="pillar-tags">
-              <span>Skill Generalization</span>
-              <span>Curriculum Learning</span>
-              <span>Role Asymmetry</span>
-            </div>
-          </article>
+            <span class="gateway-cta">Browse Publications &amp; Models →</span>
+          </a>
 
-          <article class="pillar-card">
+          <a href="/community/" class="gateway-card">
             <div>
-              <div class="pillar-num">Pillar III · Interpretability</div>
-              <h3>Representations &amp; Internal Model Dynamics</h3>
+              <div class="gateway-kicker">03 · Shared Tasks &amp; Dissemination</div>
+              <h3>Workshops &amp; Public Outreach</h3>
               <p>
-                Looking inside fine-tuned and RL-adapted compact models to characterize what interactive learning modifies in parameter and activation space—disentangling surface format compliance from genuine strategic and pragmatic mechanisms.
+                Discover <em>The LM Playschool Workshop &amp; Challenge</em> organized at EMNLP 2026 in Budapest alongside regional public science coverage in the <em>Südtiroler Wirtschaftszeitung (SWZ)</em>.
               </p>
             </div>
-            <div class="pillar-tags">
-              <span>Mechanistic Probing</span>
-              <span>Parameter Dynamics</span>
-              <span>Transparent AI</span>
-            </div>
-          </article>
+            <span class="gateway-cta">Explore Workshops &amp; Outreach →</span>
+          </a>
 
-          <article class="pillar-card">
+          <a href="/team/" class="gateway-card">
             <div>
-              <div class="pillar-num">Pillar IV · Benchmarking &amp; Sustainability</div>
-              <h3>Functional Assessment with Compact Open Models</h3>
+              <div class="gateway-kicker">04 · Bilateral Consortium</div>
+              <h3>People &amp; Partner Universities</h3>
               <p>
-                Advancing reference-free, interactive evaluation instruments that measure whether small, open-weights language models can match or exceed far larger architectures on purposeful communication—reducing both data hunger and environmental cost.
+                Meet the Principal Investigators, project researchers at the University of Potsdam and Free University of Bozen-Bolzano, and external collaborators in Edinburgh and Amsterdam.
               </p>
             </div>
-            <div class="pillar-tags">
-              <span>clembench</span>
-              <span>Small Open LLMs</span>
-              <span>Green AI</span>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================================================================
-         4. DFG Priority Programme SPP 2556 "LaSTing"
-         =================================================================== -->
-    <section class="section" id="lasting">
-      <div class="container">
-        <div class="spp-feature">
-          <div>
-            <span class="section-kicker">04 · Research Network &amp; Framework</span>
-            <h3>Embedded in DFG Priority Programme SPP 2556 “LaSTing”</h3>
-            <p>
-              LLADIGA is an integral project of the German Research Foundation (DFG) Priority Programme <strong>SPP 2556 — <em>LaSTing</em></strong> (<em>“Robust Assessment &amp; Safe Applicability of Language Modeling: Foundations for a New Field of Language Science &amp; Technology”</em>), coordinated across leading computational linguistics and AI groups in Europe.
-            </p>
-            <p>
-              Within <em>LaSTing</em> and the bilateral <strong>DFG – Autonomous Province of Bolzano (D-SUD LAV)</strong> partnership, LLADIGA bridges foundational questions in human-inspired language science with rigorous engineering for trustworthy, resource-conscious language technology.
-            </p>
-            <a href="https://www.lasting-spp.org/" target="_blank" rel="noopener noreferrer" class="btn-pill" style="background: #FFFFFF; border-color: #FFFFFF; color: #0D253F;">
-              <span>Visit Priority Area “LaSTing” (lasting-spp.org) ↗</span>
-            </a>
-          </div>
-
-          <div class="spp-axes">
-            <h4>LaSTing Core Focus Areas Addressed</h4>
-            <ul class="spp-axis-list">
-              <li>
-                <span class="axis-check">✓</span>
-                <span><strong>Behavioral Assessment:</strong> Dynamic, multi-turn dialogue probes beyond static benchmarks</span>
-              </li>
-              <li>
-                <span class="axis-check">✓</span>
-                <span><strong>Representations &amp; Mechanisms:</strong> Tracking structural changes inside adapted models</span>
-              </li>
-              <li>
-                <span class="axis-check">✓</span>
-                <span><strong>Training &amp; Optimization:</strong> Learning from interactive rewards and communicative success</span>
-              </li>
-              <li>
-                <span class="axis-check">✓</span>
-                <span><strong>Resource Efficiency:</strong> Empowering compact open-weights models with less data</span>
-              </li>
-              <li>
-                <span class="axis-check">✓</span>
-                <span><strong>Alternative Paradigms:</strong> Purpose-driven, developmentally inspired acquisition</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================================================================
-         5. Community Challenges: The LM Playschool @ EMNLP 2026
-         =================================================================== -->
-    <section class="section alt-bg" id="challenges">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-kicker">05 · Community Challenges in Learning in Interaction</span>
-          <h2 class="section-title">The LM Playschool Workshop &amp; Challenge</h2>
-          <p class="section-desc">
-            Catalyzing a global research community around post-training and evaluating language models through situated, goal-oriented dialogue interaction.
-          </p>
-        </div>
-
-        <div class="challenge-spotlight">
-          <div>
-            <div class="event-meta-pills">
-              <span class="event-pill live">EMNLP 2026 · Budapest, Hungary</span>
-              <span class="event-pill">Workshop &amp; Shared Task</span>
-              <span class="event-pill">ACL Anthology Proceedings</span>
-            </div>
-            <h3>The LM Playschool: Improving Language Models through Learning from Dialogue Interaction</h3>
-            <p>
-              Organized by the LLADIGA project team and collaborators at <strong>EMNLP 2026 in Budapest</strong>, <em>The LM Playschool</em> introduced a community-wide shared task built on the <code>lm-playpen</code> workbench. Participating teams explored supervised fine-tuning, preference optimization, and reinforcement learning over dialogue game interactions to improve interactive competence (<code>clemscore</code>) on held-out games without sacrificing general capabilities (<code>statscore</code>).
-            </p>
-            <div class="pub-actions">
-              <a href="https://lm-playschool.github.io/" target="_blank" rel="noopener noreferrer" class="btn-pill primary">
-                <span>Workshop Website (lm-playschool.github.io) ↗</span>
-              </a>
-              <a href="https://aclanthology.org/2026.lmplayschool-1.9/" target="_blank" rel="noopener noreferrer" class="btn-pill">
-                <span>Challenge Findings Paper (ACL Anthology) ↗</span>
-              </a>
-              <a href="https://lm-playschool.github.io/leaderboard" target="_blank" rel="noopener noreferrer" class="btn-pill">
-                <span>Shared Task Leaderboard ↗</span>
-              </a>
-            </div>
-          </div>
-
-          <div class="challenge-side-card">
-            <div class="emnlp-logo-wrap">
-              <img src="assets/img/logos/emnlp2026.png" alt="EMNLP 2026 Logo" loading="lazy" />
-            </div>
-            <div class="challenge-metrics">
-              <div class="c-stat">
-                <strong>clemscore</strong>
-                <span>Interactive Game Evaluation</span>
-              </div>
-              <div class="c-stat">
-                <strong>lm-playpen</strong>
-                <span>Learning Workbench</span>
-              </div>
-              <div class="c-stat">
-                <strong>Open LLMs</strong>
-                <span>Sample-Efficient Post-Training</span>
-              </div>
-              <div class="c-stat">
-                <strong>Held-Out Games</strong>
-                <span>True Task Generalization</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================================================================
-         6. Publications, Technical Reports & Open Ecosystem
-         =================================================================== -->
-    <section class="section" id="publications">
-      <div class="container">
-        <div class="pub-toolbar">
-          <div class="section-header" style="margin-bottom: 0;">
-            <span class="section-kicker">06 · Scholarship &amp; Open Science</span>
-            <h2 class="section-title">Publications, Reports &amp; Artifacts</h2>
-          </div>
-
-          <div class="filter-tabs" role="group" aria-label="Filter publications">
-            <button class="filter-btn active" type="button" data-filter="all">All Outputs</button>
-            <button class="filter-btn" type="button" data-filter="peer-reviewed">Peer-Reviewed</button>
-            <button class="filter-btn" type="button" data-filter="report">Technical Reports</button>
-          </div>
-        </div>
-
-        <div class="pub-list">
-          <!-- Publication 1: Playschool Report (ACL Anthology 2026) -->
-          <article class="pub-card" data-category="peer-reviewed">
-            <div class="pub-top">
-              <span class="pub-badge published">ACL Anthology · 2026</span>
-              <span class="pub-venue">Proceedings of The LM Playschool Workshop @ EMNLP 2026 (pp. 110–126), Budapest, Hungary</span>
-            </div>
-            <h3 class="pub-title">
-              <a href="https://aclanthology.org/2026.lmplayschool-1.9/" target="_blank" rel="noopener noreferrer">
-                The LM Playschool Challenge 2026
-              </a>
-            </h3>
-            <p class="pub-authors">
-              Sherzod Hakimov, <strong>Dimitrije Ristić</strong>, Philipp Sadler, Davide Mazzaccara, Sabrina McCallum, Filippo Momentè, Maria Manina, Karl Osswald, Dieu-Thu Le, Oliver Lemon, Alexander Koller, <strong>Raffaella Bernardi</strong>, <strong>Raquel Fernández</strong>, Mario Giulianelli, <strong>Alessandro Suglia</strong>, and <strong>David Schlangen</strong>.
-            </p>
-            <div class="pub-actions">
-              <a href="https://aclanthology.org/2026.lmplayschool-1.9/" target="_blank" rel="noopener noreferrer" class="pub-action-btn">
-                📄 Paper &amp; Anthology Page
-              </a>
-              <a href="https://aclanthology.org/2026.lmplayschool-1.9.pdf" target="_blank" rel="noopener noreferrer" class="pub-action-btn">
-                ⬇ PDF
-              </a>
-              <button type="button" class="pub-action-btn" data-toggle-bib="bib-playschool2026" aria-expanded="false">
-                { } BibTeX
-              </button>
-            </div>
-            <div class="bibtex-drawer" id="bib-playschool2026">
-              <button type="button" class="copy-bib-btn" data-copy-bib="pre-playschool2026">Copy</button>
-              <pre id="pre-playschool2026">@inproceedings{hakimov-etal-2026-lm,
-    title = "The {LM} Playschool Challenge 2026",
-    author = "Hakimov, Sherzod and Ristic, Dimitrije and Sadler, Philipp and Mazzaccara, Davide and McCallum, Sabrina and Moment{\`e}, Filippo and Manina, Maria and Osswald, Karl and Le, Dieu-Thu and Lemon, Oliver and Koller, Alexander and Bernardi, Raffaella and Fern{\'a}ndez, Raquel and Giulianelli, Mario and Suglia, Alessandro and Schlangen, David",
-    booktitle = "The Proceedings of Improving Language Models through Learning from Dialogue Game Interaction",
-    month = oct,
-    year = "2026",
-    address = "Budapest, Hungary",
-    publisher = "Association for Computational Linguistics",
-    url = "https://aclanthology.org/2026.lmplayschool-1.9/",
-    doi = "10.18653/2026.lmplayschool-1.9",
-    pages = "110--126"
-}</pre>
-            </div>
-          </article>
-
-          <!-- Publication 2: Dimitrije's Technical Report -->
-          <article class="pub-card" data-category="report">
-            <div class="pub-top">
-              <span class="pub-badge prep">In Preparation</span>
-              <span class="pub-venue">LLADIGA Technical Report · University of Potsdam &amp; Free University of Bozen-Bolzano</span>
-            </div>
-            <h3 class="pub-title">
-              Technical Report on Learning Language in Interactive Dialogue Game Environments
-            </h3>
-            <p class="pub-authors">
-              <strong>Dimitrije Ristić</strong>, <strong>David Schlangen</strong>, <strong>Raffaella Bernardi</strong>, and LLADIGA Collaborators.
-            </p>
-            <div class="pub-actions">
-              <span class="pub-action-btn" style="cursor: default; opacity: 0.78;">
-                🕒 Preprint &amp; Code Release Forthcoming
-              </span>
-            </div>
-          </article>
-        </div>
-
-        <!-- Open Science Ecosystem Cards -->
-        <div class="resources-grid">
-          <div class="resource-card">
-            <div>
-              <h4>💻 GitHub Organization</h4>
-              <p>
-                Official code repositories, training pipelines, evaluation harnesses, and reproducible experimental suites developed within LLADIGA.
-              </p>
-            </div>
-            <a href="https://github.com/LLADIGA" target="_blank" rel="noopener noreferrer" class="pub-action-btn" style="align-self: flex-start;">
-              github.com/LLADIGA ↗
-            </a>
-          </div>
-
-          <div class="resource-card">
-            <div>
-              <h4>🤗 Hugging Face Hub</h4>
-              <p>
-                Open-weights model checkpoints and role-specific dialogue game specialists released by the LLADIGA research team.
-              </p>
-            </div>
-            <a href="https://huggingface.co/LLADIGA" target="_blank" rel="noopener noreferrer" class="pub-action-btn" style="align-self: flex-start;">
-              huggingface.co/LLADIGA ↗
-            </a>
-          </div>
-
-          <div class="resource-card">
-            <div>
-              <h4>🎲 clembench &amp; Playpen</h4>
-              <p>
-                Foundational dialogue game evaluation framework and interactive learning environment co-developed at Potsdam and partner labs.
-              </p>
-            </div>
-            <a href="https://clembench.github.io/" target="_blank" rel="noopener noreferrer" class="pub-action-btn" style="align-self: flex-start;">
-              clembench.github.io ↗
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================================================================
-         7. People & Consortium
-         =================================================================== -->
-    <section class="section alt-bg" id="team">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-kicker">07 · Consortium</span>
-          <h2 class="section-title">People Behind LLADIGA</h2>
-          <p class="section-desc">
-            A bilateral research team across the University of Potsdam and the Free University of Bozen-Bolzano, working closely with European collaborators in Edinburgh and Amsterdam.
-          </p>
-        </div>
-
-        <!-- Principal Investigators -->
-        <div class="team-group">
-          <h3 class="team-group-title">Project Leaders (Principal Investigators)</h3>
-          <div class="team-grid">
-            <article class="person-card">
-              <img src="assets/img/team/david_schlangen.jpg" alt="Portrait of Prof. Dr. David Schlangen" class="person-avatar" width="72" height="72" loading="lazy" />
-              <div class="person-info">
-                <h4 class="person-name">Prof. Dr. David Schlangen</h4>
-                <p class="person-role">Principal Investigator (Potsdam)</p>
-                <p class="person-affil">Foundations of Computational Linguistics, University of Potsdam</p>
-                <div class="person-links">
-                  <a href="https://www.ling.uni-potsdam.de/~das/" target="_blank" rel="noopener noreferrer">Website ↗</a>
-                </div>
-              </div>
-            </article>
-
-            <article class="person-card">
-              <img src="assets/img/team/raffaella_bernardi.jpg" alt="Portrait of Prof. Raffaella Bernardi" class="person-avatar" width="72" height="72" loading="lazy" />
-              <div class="person-info">
-                <h4 class="person-name">Prof. Raffaella Bernardi</h4>
-                <p class="person-role">Principal Investigator (unibz)</p>
-                <p class="person-affil">Faculty of Engineering, Free University of Bozen-Bolzano</p>
-                <div class="person-links">
-                  <a href="https://www.unibz.it/en/faculties/engineering/academic-staff/person/2311-raffaella-bernardi" target="_blank" rel="noopener noreferrer">Website ↗</a>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-
-        <!-- Project Researchers / Collaborators -->
-        <div class="team-group">
-          <h3 class="team-group-title">Project Researchers</h3>
-          <div class="team-grid">
-            <article class="person-card">
-              <img src="assets/img/team/farooq_wani.jpg" alt="Portrait of Farooq Ahmad Wani" class="person-avatar" width="72" height="72" loading="lazy" />
-              <div class="person-info">
-                <h4 class="person-name">Farooq Ahmad Wani</h4>
-                <p class="person-role">Postdoctoral Researcher</p>
-                <p class="person-affil">Free University of Bozen-Bolzano (unibz)</p>
-                <div class="person-links">
-                  <a href="https://sites.google.com/uniroma1.it/farooq-ahmad-wani" target="_blank" rel="noopener noreferrer">Website ↗</a>
-                  <a href="https://github.com/wanifarooq" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-                </div>
-              </div>
-            </article>
-
-            <article class="person-card">
-              <img src="assets/img/team/dimitrije_ristic.jpg" alt="Portrait of Dimitrije Ristić" class="person-avatar" width="72" height="72" loading="lazy" />
-              <div class="person-info">
-                <h4 class="person-name">Dimitrije Ristić</h4>
-                <p class="person-role">Doctoral Researcher</p>
-                <p class="person-affil">University of Potsdam</p>
-                <div class="person-links">
-                  <a href="https://www.linkedin.com/in/dimitrije-ristic-ba8905184/" target="_blank" rel="noopener noreferrer">Profile ↗</a>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-
-        <!-- External Collaborators -->
-        <div class="team-group">
-          <h3 class="team-group-title">External Collaborators</h3>
-          <div class="team-grid">
-            <article class="person-card">
-              <img src="assets/img/team/alessandro_suglia.jpg" alt="Portrait of Dr. Alessandro Suglia" class="person-avatar" width="72" height="72" loading="lazy" />
-              <div class="person-info">
-                <h4 class="person-name">Dr. Alessandro Suglia</h4>
-                <p class="person-role">External Collaborator</p>
-                <p class="person-affil">School of Informatics, University of Edinburgh</p>
-                <div class="person-links">
-                  <a href="https://alesuglia.github.io/" target="_blank" rel="noopener noreferrer">Website ↗</a>
-                </div>
-              </div>
-            </article>
-
-            <article class="person-card">
-              <img src="assets/img/team/raquel_fernandez.png" alt="Portrait of Prof. Raquel Fernández" class="person-avatar" width="72" height="72" loading="lazy" />
-              <div class="person-info">
-                <h4 class="person-name">Prof. Raquel Fernández</h4>
-                <p class="person-role">External Collaborator</p>
-                <p class="person-affil">ILLC, University of Amsterdam</p>
-                <div class="person-links">
-                  <a href="https://staff.fnwi.uva.nl/r.fernandezrovira/" target="_blank" rel="noopener noreferrer">Website ↗</a>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-
-        <!-- Past Contributors -->
-        <div class="team-group">
-          <h3 class="team-group-title">Past Contributors</h3>
-          <div class="team-grid">
-            <article class="person-card">
-              <img src="assets/img/team/filippo_momente.jpg" alt="Portrait of Filippo Momentè" class="person-avatar" width="72" height="72" loading="lazy" />
-              <div class="person-info">
-                <h4 class="person-name">Filippo Momentè</h4>
-                <p class="person-role">Former Research Collaborator</p>
-                <p class="person-affil">Free University of Bozen-Bolzano / University of Trento</p>
-                <div class="person-links">
-                  <a href="https://www.linkedin.com/in/filippo-moment%C3%A8-9a9200152/" target="_blank" rel="noopener noreferrer">Profile ↗</a>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================================================================
-         8. Dissemination Activities & Public Outreach
-         =================================================================== -->
-    <section class="section" id="dissemination">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-kicker">08 · Dissemination Activities</span>
-          <h2 class="section-title">Public Science &amp; Regional Engagement</h2>
-          <p class="section-desc">
-            Communicating transparent, sustainable, and human-inspired AI research beyond academia to society, industry, and regional stakeholders in South Tyrol and Germany.
-          </p>
-        </div>
-
-        <div class="dissem-grid">
-          <article class="dissem-card">
-            <div class="dissem-source">Press &amp; Regional Media · South Tyrol</div>
-            <h3>Südtiroler Wirtschaftszeitung (SWZ)</h3>
-            <p>
-              Public-facing science communication exploring what happens inside artificial neural networks, why small and transparent language models matter, and how the <strong>LLADIGA</strong> initiative at the Free University of Bozen-Bolzano investigates purposeful, data-efficient language learning through dialogue interaction.
-            </p>
-          </article>
-
-          <article class="dissem-card">
-            <div class="dissem-source">Open Benchmarks &amp; Academic Exchange</div>
-            <h3>International Shared Tasks &amp; Open Models</h3>
-            <p>
-              Through <a href="https://lm-playschool.github.io/" target="_blank" rel="noopener noreferrer">The LM Playschool</a>, open evaluation suites (<a href="https://clembench.github.io/" target="_blank" rel="noopener noreferrer"><code>clembench</code></a>), and publicly accessible compact specialist checkpoints on <a href="https://huggingface.co/LLADIGA" target="_blank" rel="noopener noreferrer">Hugging Face</a>, LLADIGA lowers the barrier for universities and independent labs to study interactive post-training without hyperscale compute.
-            </p>
-          </article>
+            <span class="gateway-cta">Meet the Team →</span>
+          </a>
         </div>
       </div>
     </section>
 
     <!-- ===================================================================
          Official Funding Logos Band
-         Compliant with Autonomous Province of Bolzano brand guidelines:
-         - Exclusive official trilingual logo on pure white (#FFFFFF)
-         - Left-aligned ("allineato a sinistra, anche in presenza di altri loghi")
-         - Width strictly >= 180px (270px desktop / >= 195px mobile)
-         - Generous >= 2X clear space ("Area di rispetto")
-         - Textual acknowledgment kept separate in footer below
          =================================================================== -->
     <section class="funder-band" aria-label="Funding Institutions">
       <div class="container">
         <div class="funder-logos-row">
           <a href="https://home.provincia.bz.it/" target="_blank" rel="noopener noreferrer" class="logo-respect-zone-bolzano" title="Autonomous Province of Bolzano – South Tyrol">
             <img
-              src="assets/img/logos/provincia-bolzano.png"
+              src="/assets/img/logos/provincia-bolzano.png"
               alt="Autonome Provinz Bozen – Provincia autonoma di Bolzano – Provinzia autonoma de Bulsan – Südtirol Alto Adige"
               class="logo-bolzano"
               width="270"
@@ -849,7 +341,7 @@
 
           <a href="https://www.dfg.de/en" target="_blank" rel="noopener noreferrer" class="logo-respect-zone-dfg" title="Deutsche Forschungsgemeinschaft (DFG)">
             <img
-              src="assets/img/logos/dfg-logo.svg"
+              src="/assets/img/logos/dfg-logo.svg"
               alt="DFG — Deutsche Forschungsgemeinschaft (German Research Foundation)"
               class="logo-dfg"
               width="245"
@@ -862,7 +354,7 @@
   </main>
 
   <!-- =====================================================================
-       Footer (with separate statutory funding recognition text)
+       Footer
        ===================================================================== -->
   <footer class="site-footer">
     <div class="container">
@@ -907,8 +399,7 @@
     </div>
   </footer>
 
-  <!-- Scripts -->
-  <script src="assets/js/site-data.js"></script>
-  <script src="assets/js/main.js"></script>
+  <script src="/assets/js/site-data.js"></script>
+  <script src="/assets/js/main.js"></script>
 </body>
 </html>
