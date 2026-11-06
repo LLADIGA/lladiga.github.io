@@ -281,8 +281,8 @@ img {
 .hero-layout {
   position: relative;
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 48px;
+  grid-template-columns: 1.04fr 0.96fr;
+  gap: 44px;
   align-items: center;
 }
 
@@ -421,7 +421,86 @@ img {
   color: var(--ink-primary);
 }
 
-/* Hero Right: Conceptual Paradigm Card */
+/* Hero Right: Conceptual Teaser & Paradigm Card */
+.teaser-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 18px;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+}
+
+.teaser-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 24px;
+  right: 24px;
+  height: 3px;
+  border-radius: 0 0 4px 4px;
+  background: linear-gradient(90deg, var(--accent-blue), var(--accent-teal), var(--accent-crimson));
+}
+
+.teaser-frame {
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-canvas);
+  margin-bottom: 14px;
+}
+
+.teaser-frame img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.teaser-contrast-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.teaser-mini-box {
+  padding: 11px 13px;
+  border-radius: 10px;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-canvas);
+}
+
+.teaser-mini-box.active-paradigm {
+  background: linear-gradient(135deg, rgba(0, 75, 135, 0.045), rgba(13, 116, 107, 0.075));
+  border-color: rgba(13, 116, 107, 0.32);
+}
+
+.teaser-mini-kicker {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ink-muted);
+  margin-bottom: 3px;
+}
+
+.teaser-mini-box.active-paradigm .teaser-mini-kicker {
+  color: var(--accent-teal);
+}
+
+.teaser-mini-text {
+  margin: 0;
+  font-size: 0.8rem;
+  line-height: 1.45;
+  color: var(--ink-secondary);
+}
+
+.teaser-mini-text strong {
+  color: var(--ink-primary);
+}
+
+/* Legacy Paradigm Card */
 .paradigm-card {
   background: var(--bg-surface);
   border: 1px solid var(--border-subtle);
@@ -464,6 +543,8 @@ img {
   gap: 5px;
   font-size: 0.73rem;
   font-weight: 700;
+  white-space: nowrap;
+  flex-shrink: 0;
   color: var(--accent-teal);
   background: var(--accent-teal-soft);
   padding: 4px 10px;
@@ -1715,7 +1796,8 @@ img {
     padding: 48px 0;
   }
 
-  .hero-meta-strip {
+  .hero-meta-strip,
+  .teaser-contrast-row {
     grid-template-columns: 1fr;
     gap: 12px;
   }
