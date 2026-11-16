@@ -234,4 +234,38 @@
       }
     });
   });
+
+  /* --------------------------------------------------------------------------
+     4. Execution Timeline Task Details (active on /research/)
+     Wide screens: details open on hover; a mouse click must not focus the
+     row (focus would keep a second card open).
+     Narrow screens: tap (or Enter/Space) toggles a row open/closed inline;
+     opening one row closes the others.
+     -------------------------------------------------------------------------- */
+  const wideTimeline = window.matchMedia("(min-width: 1060px)");
+  const taskRows = document.querySelectorAll(".tl-task");
+
+  const toggleTask = (row) => {
+    const willOpen = !row.classList.contains("is-open");
+    taskRows.forEach((r) => r.classList.remove("is-open"));
+    if (willOpen) row.classList.add("is-open");
+  };
+
+  taskRows.forEach((row) => {
+    row.addEventListener("mousedown", (e) => {
+      if (wideTimeline.matches) e.preventDefault();
+    });
+
+    row.addEventListener("click", () => {
+      if (!wideTimeline.matches) toggleTask(row);
+    });
+
+    row.addEventListener("keydown", (e) => {
+      if (wideTimeline.matches) return;
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        toggleTask(row);
+      }
+    });
+  });
 })();

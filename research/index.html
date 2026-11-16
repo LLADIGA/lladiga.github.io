@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Research &amp; Dialogue Sandbox — LLADIGA | University of Potsdam &amp; Free University of Bozen-Bolzano</title>
-  <meta name="description" content="Explore LLADIGA's interactive dialogue game sandbox, four core scientific pillars, and alignment with DFG Priority Programme SPP 2556 'LaSTing'." />
+  <meta name="description" content="LLADIGA's objective, research questions and work packages, an interactive dialogue game sandbox, and alignment with DFG Priority Programme SPP 2556 'LaSTing'." />
   <link rel="canonical" href="https://lladiga.github.io/research/" />
 
   <meta property="og:type" content="website" />
@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="stylesheet" href="/assets/css/styles.css?v=2" />
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -85,7 +85,7 @@
           <span class="section-kicker">01 · Interactive Arena</span>
           <h2 class="section-title">How Models Learn &amp; Play in Dialogue Games</h2>
           <p class="section-desc">
-            Inspect representative multi-turn episodes mediated by a deterministic Game Master (built on the open <a href="https://clembench.github.io/" target="_blank" rel="noopener noreferrer"><code>clembench</code></a> and <code>lm-playpen</code> ecosystem). Switch games or step turn-by-turn to see how communicative success generates structured learning signals.
+            Inspect representative multi-turn episodes from the dialogue games of the open <a href="https://clembench.github.io/" target="_blank" rel="noopener noreferrer"><code>clembench</code></a> benchmark, which also serve as learning environments in <a href="https://github.com/lm-playpen/playpen" target="_blank" rel="noopener noreferrer"><code>playpen</code></a>. Each episode is mediated by a deterministic Game Master. Switch games or step turn-by-turn to see how communicative success generates structured learning signals.
           </p>
         </div>
 
@@ -163,87 +163,253 @@
       </div>
     </section>
 
-    <!-- 2. Core Research Pillars -->
-    <section class="section alt-bg" id="pillars">
+    <!-- 2. Objective & Research Questions -->
+    <section class="section alt-bg" id="questions">
       <div class="container">
         <div class="section-header">
-          <span class="section-kicker">02 · Scientific Roadmap</span>
-          <h2 class="section-title">Four Interlocking Research Pillars</h2>
+          <span class="section-kicker">02 · Objective &amp; Research Questions</span>
+          <h2 class="section-title">Bridging Human and Machine Language Acquisition</h2>
           <p class="section-desc">
-            Across its three-year program, LLADIGA investigates interactive learning from external behavioral dynamics down to internal model mechanisms.
+            The central objective of LLADIGA is to bridge the gap between the human and machine language acquisition settings. To do so, we need to find the right <strong>setting</strong>, <strong>training phase</strong>, <strong>learning method</strong> and <strong>evaluation framework</strong>. From this, we derive four main research questions:
           </p>
         </div>
 
-        <div class="pillars-grid">
-          <article class="pillar-card">
-            <div>
-              <div class="pillar-num">Pillar I · Interactive Learning</div>
-              <h3>Multi-Turn Post-Training &amp; Reinforcement Learning</h3>
-              <p>
-                Developing training regimes—spanning imitation on successful interaction traces, preference optimization, and online multi-turn reinforcement learning—that harness programmatic Game Master rewards and intrinsic communicative feedback rather than static human annotations.
-              </p>
+        <ol class="rq-grid">
+          <li class="rq-card" id="rq1">
+            <div class="rq-head">
+              <span class="rq-num">RQ1</span>
+              <span class="rq-dim">Setting</span>
             </div>
-            <div class="pillar-tags">
-              <span>Multi-Turn RL</span>
-              <span>lm-playpen</span>
-              <span>Intrinsic Feedback</span>
+            <p class="rq-text">Can interactive learning be made feasible for LLM training, and are dialogue games the right setting?</p>
+          </li>
+          <li class="rq-card" id="rq2">
+            <div class="rq-head">
+              <span class="rq-num">RQ2</span>
+              <span class="rq-dim">Training Phase &amp; Learning Method</span>
             </div>
+            <p class="rq-text">Which training phases and learning methods make best use of the learning signal in multi-turn interactions?</p>
+          </li>
+          <li class="rq-card" id="rq3">
+            <div class="rq-head">
+              <span class="rq-num">RQ3</span>
+              <span class="rq-dim">Learning Method</span>
+            </div>
+            <p class="rq-text">Is multi-turn reinforcement learning the right method, and can it learn from conversational feedback?</p>
+          </li>
+          <li class="rq-card" id="rq4">
+            <div class="rq-head">
+              <span class="rq-num">RQ4</span>
+              <span class="rq-dim">Evaluation Framework</span>
+            </div>
+            <p class="rq-text">How should functional language abilities learned in multi-turn interaction be evaluated?</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 3. Work Packages -->
+    <section class="section" id="work-packages">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">03 · Work Packages</span>
+          <h2 class="section-title">How We Address the Questions</h2>
+          <p class="section-desc">
+            LLADIGA is organised into four work packages: building the learning environment, developing multi-turn reinforcement learning from conversational feedback, evaluating what models learn, and opening the framework to the community through public challenges.
+          </p>
+        </div>
+
+        <div class="wp-grid">
+          <article class="wp-card">
+            <header class="wp-head">
+              <span class="wp-num" aria-hidden="true">01</span>
+              <div>
+                <span class="wp-kicker">Work Package 1</span>
+                <h3>Environment</h3>
+              </div>
+            </header>
+            <p>
+              The goal of this work package is to provide a research framework that enables comprehensive experiments on multi-turn reinforcement learning with conversational feedback (mt-RLCF). To do so, we plan to expand our <a href="https://github.com/lm-playpen/playpen" target="_blank" rel="noopener noreferrer"><code>playpen</code></a> framework such that denser game rewards and verbal feedback become a standard part of the suite. Furthermore, we aim to expand <a href="https://clembench.github.io/" target="_blank" rel="noopener noreferrer"><code>clembench</code></a>, our game suite, with games measuring natural conversation quality and a set of simplified language games, aimed to serve as a baseline to measure the basic applicability of mt-RLCF.
+            </p>
           </article>
 
-          <article class="pillar-card">
-            <div>
-              <div class="pillar-num">Pillar II · Generalization</div>
-              <h3>Cross-Game Skill Transfer &amp; Curricula</h3>
-              <p>
-                Investigating how functional skills acquired in one family of dialogue games—such as spatial mental modeling, hypothesis pruning, or pragmatic speaker-listener coordination—transfer to unseen games, roles, and broader reasoning tasks, informing principled training curricula.
-              </p>
-            </div>
-            <div class="pillar-tags">
-              <span>Skill Generalization</span>
-              <span>Curriculum Learning</span>
-              <span>Role Asymmetry</span>
-            </div>
+          <article class="wp-card">
+            <header class="wp-head">
+              <span class="wp-num" aria-hidden="true">02</span>
+              <div>
+                <span class="wp-kicker">Work Package 2</span>
+                <h3>Multi-Turn RL from Conversational Feedback</h3>
+              </div>
+            </header>
+            <p>
+              We implement existing multi-turn RL methods as baselines and develop new ones, comparing mt-RLCF with supervised fine-tuning and dialogue games with other preference data. The work proceeds in three phases: post-training, base model fine-tuning, and mt-RLCF from scratch.
+            </p>
           </article>
 
-          <article class="pillar-card">
-            <div>
-              <div class="pillar-num">Pillar III · Interpretability</div>
-              <h3>Representations &amp; Internal Model Dynamics</h3>
-              <p>
-                Looking inside fine-tuned and RL-adapted compact models to characterize what interactive learning modifies in parameter and activation space—disentangling surface format compliance from genuine strategic and pragmatic mechanisms.
-              </p>
-            </div>
-            <div class="pillar-tags">
-              <span>Mechanistic Probing</span>
-              <span>Parameter Dynamics</span>
-              <span>Transparent AI</span>
-            </div>
+          <article class="wp-card">
+            <header class="wp-head">
+              <span class="wp-num" aria-hidden="true">03</span>
+              <div>
+                <span class="wp-kicker">Work Package 3</span>
+                <h3>Evaluation &amp; Analysis</h3>
+              </div>
+            </header>
+            <p>
+              We build a language-use test battery that yields an aggregate score for comparing models and per-skill measures for diagnosis. It combines interactive evaluation on games not used for learning, standard benchmarks to detect forgetting, and new tests of conversational abilities such as speech-act diversity, entrainment and common-ground building. We then probe how learning changes the model internally, comparing checkpoints before and after training and across training regimes. A scaled-down variant of the battery, with more formal tests and simple games, serves models trained from scratch.
+            </p>
           </article>
 
-          <article class="pillar-card">
-            <div>
-              <div class="pillar-num">Pillar IV · Benchmarking &amp; Sustainability</div>
-              <h3>Functional Assessment with Compact Open Models</h3>
-              <p>
-                Advancing reference-free, interactive evaluation instruments that measure whether small, open-weights language models can match or exceed far larger architectures on purposeful communication—reducing both data hunger and environmental cost.
-              </p>
-            </div>
-            <div class="pillar-tags">
-              <span>clembench</span>
-              <span>Small Open LLMs</span>
-              <span>Green AI</span>
-            </div>
+          <article class="wp-card">
+            <header class="wp-head">
+              <span class="wp-num" aria-hidden="true">04</span>
+              <div>
+                <span class="wp-kicker">Work Package 4</span>
+                <h3>Community Challenge</h3>
+              </div>
+            </header>
+            <p>
+              We organise two public challenges that open <a href="https://github.com/lm-playpen/playpen" target="_blank" rel="noopener noreferrer"><code>playpen</code></a> to the community. Participants receive the learning environment and a public validation set; the final ranking uses a held-out version of the LLADIGA evaluation set. Round 1 asks for the best improvement of an already post-trained model within a set compute budget. Round 2 starts from a base model that is not yet instruction-tuned. We aim to attach the challenge to a major conference, with a continuous leaderboard and a results workshop.
+            </p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- 3. DFG Priority Programme SPP 2556 "LaSTing" -->
+    <!-- 4. Execution Timeline -->
+    <section class="section alt-bg" id="timeline">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">04 · Execution Timeline</span>
+          <h2 class="section-title">Three-Year Work Plan</h2>
+          <p class="section-desc">
+            When each task runs across the project's twelve quarters, and which partner leads it.
+          </p>
+        </div>
+
+        <ul class="tl-legend" aria-label="Lead institution">
+          <li><span class="tl-swatch up"></span>University of Potsdam</li>
+          <li><span class="tl-swatch bz"></span>Free University of Bozen-Bolzano</li>
+          <li><span class="tl-swatch joint"></span>Joint</li>
+          <li class="tl-hint">Hover over or tap a task for details</li>
+        </ul>
+
+        <div class="tl-scroll">
+          <!-- Bars: grid-column: y[year]q[quarter] / span [number of quarters]. Task details: edit the text inside .tl-pop -->
+          <div class="tl-chart">
+            <div class="tl-row tl-years" aria-hidden="true"><span class="tl-label"></span><span style="grid-column: y1q1 / span 4">Year 1</span><span style="grid-column: y2q1 / span 4">Year 2</span><span style="grid-column: y3q1 / span 4">Year 3</span></div>
+            <div class="tl-row tl-quarters" aria-hidden="true"><span class="tl-label"></span><span>Q1</span><span>Q2</span><span>Q3</span><span>Q4</span><span>Q1</span><span>Q2</span><span>Q3</span><span>Q4</span><span>Q1</span><span>Q2</span><span>Q3</span><span>Q4</span></div>
+            <div class="tl-row tl-wp"><span class="tl-label">WP1 · Environment</span></div>
+            <div class="tl-row tl-task" tabindex="0" aria-describedby="tl-t1-1">
+              <span class="tl-label"><span class="tl-id">T1.1</span> <span class="tl-name"><code>playpen</code> 2.0, batching, etc.</span></span><span class="tl-track" aria-hidden="true"></span><span class="tl-bar up" style="grid-column: y1q1 / span 1"></span>
+              <div class="tl-pop" id="tl-t1-1" role="tooltip">
+                <span class="tl-pop-meta"><span class="tl-swatch up"></span>University of Potsdam · Year 1 Q1</span>
+                <p>Faster experience sampling through batching, a standard way to plug in models as learners or partners, and support for learning curricula, including third-party environments such as TextArena.</p>
+              </div>
+            </div>
+            <div class="tl-row tl-task" tabindex="0" aria-describedby="tl-t1-2">
+              <span class="tl-label"><span class="tl-id">T1.2</span> <span class="tl-name">Denser game rewards</span></span><span class="tl-track" aria-hidden="true"></span><span class="tl-bar up" style="grid-column: y1q2 / span 1"></span>
+              <div class="tl-pop" id="tl-t1-2" role="tooltip">
+                <span class="tl-pop-meta"><span class="tl-swatch up"></span>University of Potsdam · Year 1 Q2</span>
+                <p>Games can expose rewards per turn (dense), per episode (sparse) or both, so that multi-turn RL algorithms such as REFUEL and ArCHer can be applied.</p>
+              </div>
+            </div>
+            <div class="tl-row tl-task" tabindex="0" aria-describedby="tl-t1-3">
+              <span class="tl-label"><span class="tl-id">T1.3</span> <span class="tl-name">Supportive Game Master</span></span><span class="tl-track" aria-hidden="true"></span><span class="tl-bar up" style="grid-column: y1q3 / span 1"></span>
+              <div class="tl-pop" id="tl-t1-3" role="tooltip">
+                <span class="tl-pop-meta"><span class="tl-swatch up"></span>University of Potsdam · Year 1 Q3</span>
+                <p>Beyond numerical rewards, the learning agent can receive verbal feedback from the Game Master or from a teacher model, configurable per experiment.</p>
+              </div>
+            </div>
+            <div class="tl-row tl-task" tabindex="0" aria-describedby="tl-t1-4">
+              <span class="tl-label"><span class="tl-id">T1.4</span> <span class="tl-name">Add “natural conversation” games</span></span><span class="tl-track" aria-hidden="true"></span><span class="tl-bar bz" style="grid-column: y1q2 / span 1"></span>
+              <div class="tl-pop" id="tl-t1-4" role="tooltip">
+                <span class="tl-pop-meta"><span class="tl-swatch bz"></span>Free University of Bozen-Bolzano · Year 1 Q2</span>
+                <p>Games that measure conversational quality beyond task success, such as Tangram reference games, where people shorten repeated references and LLMs do not, and negotiation games.</p>
+              </div>
+            </div>
+            <div class="tl-row tl-task" tabindex="0" aria-describedby="tl-t1-5">
+              <span class="tl-label"><span class="tl-id">T1.5</span> <span class="tl-name">Simplified production / comprehension games</span></span><span class="tl-track" aria-hidden="true"></span><span class="tl-bar bz" style="grid-column: y2q2 / span 2"></span>
+              <div class="tl-pop" id="tl-t1-5" role="tooltip">
+                <span class="tl-pop-meta"><span class="tl-swatch bz"></span>Free University of Bozen-Bolzano · Year 2 Q2–Q3</span>
+                <p>Games with straightforward goals that serve as a technical sanity check and a baseline for mt-RLCF, simple enough to show gains even for models trained from scratch.</p>
+              </div>
+            </div>
+            <div class="tl-row tl-wp"><span class="tl-label">WP2 · Multi-Turn RL from Conversational Feedback</span></div>
+            <div class="tl-row tl-task" tabindex="0" aria-describedby="tl-t2-1">
+              <span class="tl-label"><span class="tl-id">T2.1</span> <span class="tl-name">Implement baselines (ArCHer, etc.)</span></span><span class="tl-track" aria-hidden="true"></span><span class="tl-bar up" style="grid-column: y1q1 / span 2"></span>
+              <div class="tl-pop" id="tl-t2-1" role="tooltip">
+                <span class="tl-pop-meta"><span class="tl-swatch up"></span>University of Potsdam · Year 1 Q1–Q2</span>
+                <p>State-of-the-art multi-turn RL algorithms such as ArCHer and REFUEL as ready-to-run examples, used as baselines and in the challenge starter pack.</p>
+              </div>
+            </div>
+            <div class="tl-row tl-task" tabindex="0" aria-describedby="tl-t2-2">
+              <span class="tl-label"><span class="tl-id">T2.2</span> <span class="tl-name">mt-RLCF for post-training</span></span><span class="tl-track" aria-hidden="true"></span><span class="tl-bar up" style="grid-column: y1q3 / span 3"></span>
+              <div class="tl-pop" id="tl-t2-2" role="tooltip">
+                <span class="tl-pop-meta"><span class="tl-swatch up"></span>University of Potsdam · Year 1 Q3 – Year 2 Q1</span>
+                <p>Adapting instruction-tuned models with mt-RLCF without losing existing abilities, comparing RL with supervised fine-tuning and dialogue games with static data, at 7B and 70B scale.</p>
+              </div>
+            </div>
+            <div class="tl-row tl-task" tabindex="0" aria-describedby="tl-t2-3">
+              <span class="tl-label"><span class="tl-id">T2.3</span> <span class="tl-name">mt-RLCF from base model</span></span><span class="tl-track" aria-hidden="true"></span><span class="tl-bar up" style="grid-column: y2q2 / span 3"></span>
+              <div class="tl-pop" id="tl-t2-3" role="tooltip">
+                <span class="tl-pop-meta"><span class="tl-swatch up"></span>University of Potsdam · Year 2 Q2–Q4</span>
+                <p>Starting from a base model with no instruction tuning, to test whether mt-RLCF alone produces abilities that normally require instruction tuning and preference alignment.</p>
+              </div>
+            </div>
+            <div class="tl-row tl-task" tabindex="0" aria-describedby="tl-t2-4">
+              <span class="tl-label"><span class="tl-id">T2.4</span> <span class="tl-name">mt-RLCF for training from scratch</span></span><span class="tl-track" aria-hidden="true"></span><span class="tl-bar up" style="grid-column: y3q1 / span 4"></span>
+              <div class="tl-pop" id="tl-t2-4" role="tooltip">
+                <span class="tl-pop-meta"><span class="tl-swatch up"></span>University of Potsdam · Year 3 Q1–Q4</span>
+                <p>Can a randomly initialised model acquire language from interaction alone? Trained on the simplified games and compared with language modelling on the same token budget.</p>
+              </div>
+            </div>
+            <div class="tl-row tl-wp"><span class="tl-label">WP3 · Evaluation &amp; Analysis</span></div>
+            <div class="tl-row tl-task" tabindex="0" aria-describedby="tl-t3-1">
+              <span class="tl-label"><span class="tl-id">T3.1</span> <span class="tl-name">Language-use test battery</span></span><span class="tl-track" aria-hidden="true"></span><span class="tl-bar bz" style="grid-column: y1q1 / span 3"></span>
+              <div class="tl-pop" id="tl-t3-1" role="tooltip">
+                <span class="tl-pop-meta"><span class="tl-swatch bz"></span>Free University of Bozen-Bolzano · Year 1 Q1–Q3</span>
+                <p>One aggregate score for comparing models, with per-skill sub-scores: standard benchmarks to detect forgetting, plus new tests of speech-act diversity, entrainment and common-ground building.</p>
+              </div>
+            </div>
+            <div class="tl-row tl-task" tabindex="0" aria-describedby="tl-t3-2">
+              <span class="tl-label"><span class="tl-id">T3.2</span> <span class="tl-name">Analyses of learning effects</span></span><span class="tl-track" aria-hidden="true"></span><span class="tl-bar joint" style="grid-column: y1q4 / span 2"></span><span class="tl-bar joint" style="grid-column: y2q3 / span 2"></span>
+              <div class="tl-pop" id="tl-t3-2" role="tooltip">
+                <span class="tl-pop-meta"><span class="tl-swatch joint"></span>Joint · Year 1 Q4 – Year 2 Q1 and Year 2 Q3–Q4</span>
+                <p>Looking inside the model: comparing checkpoints before and after training, and across regimes such as mt-RLCF vs. SFT, to see what learning changes in the network.</p>
+              </div>
+            </div>
+            <div class="tl-row tl-task" tabindex="0" aria-describedby="tl-t3-3">
+              <span class="tl-label"><span class="tl-id">T3.3</span> <span class="tl-name">Testing “early” language-use capabilities</span></span><span class="tl-track" aria-hidden="true"></span><span class="tl-bar bz" style="grid-column: y3q1 / span 2"></span>
+              <div class="tl-pop" id="tl-t3-3" role="tooltip">
+                <span class="tl-pop-meta"><span class="tl-swatch bz"></span>Free University of Bozen-Bolzano · Year 3 Q1–Q2</span>
+                <p>Adapting the tests for models trained from scratch, which cannot yet respond like full LLMs, with more formal tests and the simple games from T1.5.</p>
+              </div>
+            </div>
+            <div class="tl-row tl-wp"><span class="tl-label">WP4 · Community Challenge</span></div>
+            <div class="tl-row tl-task" tabindex="0" aria-describedby="tl-t4-1">
+              <span class="tl-label"><span class="tl-id">T4.1</span> <span class="tl-name">Round 1</span></span><span class="tl-track" aria-hidden="true"></span><span class="tl-bar bz" style="grid-column: y1q1 / span 6"></span>
+              <div class="tl-pop" id="tl-t4-1" role="tooltip">
+                <span class="tl-pop-meta"><span class="tl-swatch bz"></span>Free University of Bozen-Bolzano · Year 1 Q1 – Year 2 Q2</span>
+                <p>Improve an already post-trained model within a compute budget. Includes guidelines, automatic evaluation with a continuous leaderboard, and a results workshop with proceedings.</p>
+              </div>
+            </div>
+            <div class="tl-row tl-task" tabindex="0" aria-describedby="tl-t4-2">
+              <span class="tl-label"><span class="tl-id">T4.2</span> <span class="tl-name">Round 2</span></span><span class="tl-track" aria-hidden="true"></span><span class="tl-bar bz" style="grid-column: y2q3 / span 6"></span>
+              <div class="tl-pop" id="tl-t4-2" role="tooltip">
+                <span class="tl-pop-meta"><span class="tl-swatch bz"></span>Free University of Bozen-Bolzano · Year 2 Q3 – Year 3 Q4</span>
+                <p>Same format as round 1, but starting from a base model that is not yet instruction-tuned.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. DFG Priority Programme SPP 2556 "LaSTing" -->
     <section class="section" id="lasting">
       <div class="container">
         <div class="spp-feature">
           <div>
-            <span class="section-kicker">03 · Priority Research Network</span>
+            <span class="section-kicker">05 · Priority Research Network</span>
             <h3>Embedded in DFG Priority Programme SPP 2556 “LaSTing”</h3>
             <p>
               LLADIGA is an integral project of the German Research Foundation (DFG) Priority Programme <strong>SPP 2556 — <em>LaSTing</em></strong> (<em>“Robust Assessment &amp; Safe Applicability of Language Modeling: Foundations for a New Field of Language Science &amp; Technology”</em>), coordinated across leading computational linguistics and AI groups in Europe.
@@ -362,7 +528,7 @@
     </div>
   </footer>
 
-  <script src="/assets/js/site-data.js"></script>
-  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/site-data.js?v=2"></script>
+  <script src="/assets/js/main.js?v=2"></script>
 </body>
 </html>

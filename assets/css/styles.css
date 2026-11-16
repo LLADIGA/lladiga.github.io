@@ -27,6 +27,11 @@
   --accent-amber: #B45309;
   --accent-amber-soft: #FEF3C7;
 
+  /* Timeline lead institutions */
+  --lead-up: #F0B429;             /* University of Potsdam */
+  --lead-bz: #5E9F4F;             /* Free University of Bozen-Bolzano */
+  --lead-joint: #E07B39;          /* Joint */
+
   /* Borders & Shadows */
   --border-subtle: #E5E0D8;
   --border-strong: #CEC7BC;
@@ -1200,70 +1205,452 @@ img {
 }
 
 /* ==========================================================================
-   Research Pillars Grid
+   Research Questions Grid
    ========================================================================== */
-.pillars-grid {
+.rq-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
 }
 
-.pillar-card {
-  background: var(--bg-surface);
+.rq-card {
+  background: var(--bg-canvas);
   border: 1px solid var(--border-subtle);
+  border-left: 4px solid var(--accent-crimson);
   border-radius: var(--radius-md);
-  padding: 30px;
+  padding: 26px 30px 28px;
+}
+
+.rq-head {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
 }
 
-.pillar-card:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-md);
-  border-color: var(--border-strong);
-}
-
-.pillar-num {
+.rq-num {
   font-family: var(--font-mono);
-  font-size: 0.76rem;
+  font-size: 0.9rem;
   font-weight: 700;
   color: var(--accent-crimson);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  margin-bottom: 10px;
+  letter-spacing: 0.06em;
 }
 
-.pillar-card h3 {
+.rq-dim {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 3px 9px;
+  border-radius: 6px;
+  background: var(--accent-blue-soft);
+  color: var(--accent-blue);
+}
+
+.rq-card:target {
+  border-color: var(--accent-crimson);
+  box-shadow: var(--shadow-md);
+}
+
+.rq-text {
+  margin: 0;
   font-family: var(--font-serif);
-  font-size: 1.42rem;
-  font-weight: 500;
-  margin: 0 0 12px;
+  font-size: 1.32rem;
+  line-height: 1.4;
   color: var(--ink-primary);
 }
 
-.pillar-card p {
-  margin: 0 0 18px;
+/* ==========================================================================
+   Work Packages Grid
+   ========================================================================== */
+.wp-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.wp-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-top: 3px solid var(--accent-blue);
+  border-radius: var(--radius-md);
+  padding: 28px 30px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.wp-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.wp-head {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding-bottom: 18px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.wp-num {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-sm);
+  background: var(--accent-blue-soft);
+  font-family: var(--font-mono);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--accent-blue);
+}
+
+.wp-kicker {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-muted);
+  margin-bottom: 4px;
+}
+
+.wp-card h3 {
+  font-family: var(--font-serif);
+  font-size: 1.42rem;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 0;
+  color: var(--ink-primary);
+}
+
+.wp-card p {
+  margin: 0;
   font-size: 0.95rem;
   color: var(--ink-secondary);
   line-height: 1.68;
 }
 
-.pillar-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 7px;
-  margin-top: auto;
+/* ==========================================================================
+   Execution Timeline (Gantt)
+   ========================================================================== */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
-.pillar-tags span {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  padding: 4px 9px;
-  border-radius: 6px;
-  background: var(--bg-subtle);
+.tl-legend {
+  list-style: none;
+  margin: 0 0 22px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 26px;
+  font-size: 0.88rem;
   color: var(--ink-secondary);
+}
+
+.tl-legend li {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.tl-swatch {
+  width: 26px;
+  height: 12px;
+  border-radius: 3px;
+}
+
+.tl-swatch.up, .tl-bar.up { background: var(--lead-up); }
+.tl-swatch.bz, .tl-bar.bz { background: var(--lead-bz); }
+.tl-swatch.joint, .tl-bar.joint { background: var(--lead-joint); }
+
+.tl-scroll {
+  overflow-x: auto;
+  background: var(--bg-canvas);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 8px 24px 18px;
+}
+
+.tl-chart {
+  min-width: 940px;
+}
+
+.tl-row {
+  display: grid;
+  grid-template-columns:
+    [label] minmax(310px, 2.1fr)
+    [y1q1] 1fr [y1q2] 1fr [y1q3] 1fr [y1q4] 1fr
+    [y2q1] 1fr [y2q2] 1fr [y2q3] 1fr [y2q4] 1fr
+    [y3q1] 1fr [y3q2] 1fr [y3q3] 1fr [y3q4] 1fr [end];
+  min-height: 34px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.tl-row > * {
+  grid-row: 1;
+}
+
+.tl-label {
+  grid-column: label / y1q1;
+  align-self: center;
+  padding: 6px 16px 6px 0;
+  font-size: 0.88rem;
+  color: var(--ink-secondary);
+  line-height: 1.35;
+}
+
+.tl-id {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--ink-muted);
+  margin-right: 4px;
+}
+
+.tl-track {
+  grid-column: y1q1 / end;
+  background-image:
+    linear-gradient(to right, var(--border-strong) 1px, transparent 1px),
+    linear-gradient(to right, var(--border-subtle) 1px, transparent 1px);
+  background-size: calc(100% / 3) 100%, calc(100% / 12) 100%;
+  border-right: 1px solid var(--border-strong);
+}
+
+.tl-bar {
+  align-self: center;
+  height: 16px;
+  margin: 0 3px;
+  border-radius: 4px;
+}
+
+/* Header rows */
+.tl-years,
+.tl-quarters {
+  min-height: 0;
+  font-family: var(--font-mono);
+  text-align: center;
+}
+
+.tl-years {
+  border-bottom: none;
+  padding-top: 10px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-primary);
+}
+
+.tl-years > span:not(.tl-label) {
+  padding-bottom: 4px;
+  border-bottom: 2px solid var(--accent-blue);
+  margin: 0 6px;
+}
+
+.tl-quarters {
+  font-size: 0.72rem;
+  color: var(--ink-muted);
+  border-bottom: 1px solid var(--border-strong);
+}
+
+.tl-quarters > span:not(.tl-label) {
+  padding: 6px 0;
+}
+
+/* Work package group rows */
+.tl-wp {
+  min-height: 0;
+  border-bottom: none;
+}
+
+.tl-wp .tl-label {
+  grid-column: label / end;
+  padding: 18px 0 6px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent-blue);
+}
+
+/* Task rows & detail popovers */
+.tl-hint {
+  margin-left: auto;
+  font-size: 0.8rem;
+  font-style: italic;
+  color: var(--ink-muted);
+}
+
+.tl-task {
+  position: relative;
+  cursor: default;
+  transition: background-color 0.15s ease;
+}
+
+.tl-task:has(.tl-label:hover),
+.tl-task:focus-visible {
+  background-color: rgba(0, 75, 135, 0.045);
+}
+
+.tl-task:focus-visible {
+  outline: 2px solid var(--accent-blue);
+  outline-offset: -2px;
+  border-radius: 4px;
+}
+
+.tl-task .tl-label:hover,
+.tl-task:focus-visible .tl-label {
+  color: var(--ink-primary);
+}
+
+/* Affordance: dotted underline signals that the task name has details */
+.tl-name {
+  text-decoration: underline dotted var(--border-strong);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
+}
+
+.tl-task .tl-label {
+  cursor: help;
+}
+
+.tl-task .tl-label:hover .tl-name,
+.tl-task:focus-visible .tl-name,
+.tl-task.is-open .tl-name {
+  color: var(--accent-blue);
+  text-decoration-color: var(--accent-blue);
+}
+
+.tl-pop {
+  position: absolute;
+  top: calc(100% - 4px);
+  left: 0;
+  z-index: 20;
+  width: 380px;
+  padding: 14px 16px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-elevated);
+  color: var(--ink-on-dark);
+  box-shadow: var(--shadow-lg);
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(4px);
+  transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s;
+}
+
+.tl-pop-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.03em;
+  color: #A9B4C6;
+}
+
+.tl-pop-meta .tl-swatch {
+  width: 14px;
+  height: 8px;
+  border-radius: 2px;
+}
+
+.tl-pop p {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.55;
+}
+
+/* Wide screens: chart fits, popover floats below the hovered row */
+@media (min-width: 1060px) {
+  .tl-scroll {
+    overflow: visible;
+  }
+
+  .tl-task .tl-label:hover ~ .tl-pop,
+  .tl-chart:not(:has(.tl-label:hover)) .tl-task:focus-visible .tl-pop {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition-delay: 0.08s;
+  }
+}
+
+/* Narrower screens: tap a row to expand its details inline */
+@media (max-width: 1059px) {
+  .tl-hint {
+    margin-left: 0;
+  }
+
+  .tl-pop {
+    display: none;
+    position: static;
+    grid-row: 2;
+    grid-column: label / y1q1;
+    width: auto;
+    margin: 0 16px 10px 0;
+    box-shadow: none;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+
+  .tl-task {
+    cursor: pointer;
+  }
+
+  .tl-task .tl-label {
+    position: relative;
+    padding-right: 34px;
+    cursor: pointer;
+  }
+
+  /* +/– toggle indicator */
+  .tl-task .tl-label::after {
+    content: "+";
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: var(--font-mono);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--ink-muted);
+  }
+
+  .tl-task.is-open .tl-label::after {
+    content: "–";
+    color: var(--accent-blue);
+  }
+
+  .tl-task.is-open {
+    background-color: rgba(0, 75, 135, 0.045);
+  }
+
+  .tl-task.is-open .tl-pop {
+    display: block;
+  }
 }
 
 /* ==========================================================================
@@ -1940,7 +2327,8 @@ img {
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   }
 
-  .pillars-grid,
+  .wp-grid,
+  .rq-grid,
   .resources-grid,
   .dissem-grid,
   .team-grid,
@@ -1973,7 +2361,8 @@ img {
 
   .spp-feature,
   .challenge-spotlight,
-  .pillar-card {
+  .wp-card,
+  .rq-card {
     padding: 24px;
   }
 

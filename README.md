@@ -11,7 +11,7 @@ LLADIGA is a 3-year bilateral research project carried out by the **University o
 ```text
 .
 ├── index.html                  # /               — Home (Overview, Vision & Gateways)
-├── research/index.html         # /research/      — Interactive Dialogue Sandbox, Pillars & SPP LaSTing
+├── research/index.html         # /research/      — Objective & RQs, Work Packages, Dialogue Sandbox & SPP LaSTing
 ├── publications/index.html     # /publications/  — Papers, Technical Reports, BibTeX & Open Models
 ├── community/index.html        # /community/     — Organized LM Playschool Workshop & SWZ Outreach
 ├── team/index.html             # /team/          — PIs, Researchers, Collaborators & Host Universities
@@ -43,6 +43,8 @@ LLADIGA is a 3-year bilateral research project carried out by the **University o
      - **At least `180 px` wide** across all viewports,
      - Surrounded by **`>= 2X` clear space** (*Area di rispetto*),
      - With textual acknowledgment placed **separately in the footer** rather than visually attached to the logo.
+
+4. **After changing CSS or JS:** bump the `?v=` number on the `styles.css`, `site-data.js` and `main.js` links in all five pages (e.g. `?v=2` → `?v=3`), so browsers fetch the new files instead of a cached copy.
 
 ## Local Preview
 
